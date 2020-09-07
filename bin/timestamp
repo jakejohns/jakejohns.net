@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+dt=$(date +%Y-%m-%dT%H:%M:%S%z)
+stamp=$(printf '<time id="timestamp" datetime="%s">%s</time>' "$dt" "$dt")
+sed "s#\(.\s*\).*id=\"timestamp\".*#\1$stamp#"
