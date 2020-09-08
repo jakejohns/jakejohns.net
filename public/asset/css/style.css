@@ -98,12 +98,12 @@ body>* {
 .masthead img {
   display: block;
   width: 100%;
-  filter: drop-shadow(0 0 .75em rgba(255, 255, 255, .6));
+  filter: drop-shadow(0 0 .5em rgba(255, 0, 255, .6));
   animation: flicker 2s infinite linear alternate-reverse;
 }
 
 .masthead img:hover {
-  animation: none;
+  animation-play-state: paused;
 }
 
 h1 strong {
@@ -127,18 +127,22 @@ h1 strong::after {
 }
 
 h1 strong::before {
-  animation: noise1 9s infinite linear alternate-reverse;
+  animation: noise1 2s infinite linear alternate-reverse;
   background: black;
-  clip: rect(44px, 450px, 56px, 0);
   left: 2px;
   text-shadow: -1px 0 green;
 }
 
 h1 strong::after {
-  animation: noise2 12s infinite linear alternate-reverse;
+  animation: noise2 2s infinite linear alternate-reverse;
   background: black;
   left: -2px;
   text-shadow: -1px 0 magenta;
+}
+
+h1:hover strong::before,
+h1:hover strong::after {
+  animation-play-state: paused;
 }
 
 a:visited,
