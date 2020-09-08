@@ -6,14 +6,10 @@
 }
 
 @media (min-width: 1920px) {
-  :root {
-    font-size: 25px;
-  }
+  :root { font-size: 25px; }
 }
 
-::selection {
-  background: magenta; color: black;
-}
+::selection { background: magenta; color: black; }
 
 @keyframes fadeIn {
   0% {opacity:0;}
@@ -111,7 +107,6 @@ body>* {
 }
 
 h1 strong {
-  display: block;
   position: relative;
   text-transform: lowercase;
 }
@@ -136,14 +131,14 @@ h1 strong::before {
   background: black;
   clip: rect(44px, 450px, 56px, 0);
   left: 2px;
-  text-shadow: -1px 0 red;
+  text-shadow: -1px 0 green;
 }
 
 h1 strong::after {
   animation: noise2 12s infinite linear alternate-reverse;
   background: black;
   left: -2px;
-  text-shadow: -1px 0 green;
+  text-shadow: -1px 0 magenta;
 }
 
 a:visited,
