@@ -1,0 +1,79 @@
+@media (min-width: 768px) {
+  :root {
+    font-size: calc(0.9375rem + ((1vw - 7.68px) * 0.8681));
+    min-height: 0vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root { font-size: 25px; }
+}
+
+::selection { background: magenta; color: black; }
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+@keyframes  flicker {
+  0% {opacity: .9;}
+  2% {opacity: .8;}
+  80% {opacity: .9;}
+  85% {opacity: .65;}
+  99% {opacity: .79;}
+  100% {opacity: 1;}
+}
+
+@keyframes gliderblip {
+  0% { transform: rotateX(10deg) skewX(10deg); }
+  .5% { transform: rotateX(0deg) skewX(0deg); }
+}
+
+body {
+  animation: fadeIn ease .5s;
+  background-color: black;
+  border-bottom: 2em solid black;
+  color: snow;
+  font-family: sans-serif;
+  line-height: 1.5;
+  padding-bottom: 2em;
+  position: relative;
+}
+
+.main,
+.footer {
+  margin: 0 auto;
+  max-width: 32em;
+  padding: 1em 1em 0;
+}
+
+.masthead {
+  font-family: monospace;
+  font-size: .8em;
+  padding: .5em 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+a:visited,
+a:link {
+  color: gray;
+}
+
+a:hover,
+a:focus {
+  color: red;
+  outline: 0;
+}
+
+ul { list-style-type: square; }
+
+.footer {
+  border-top: 1px solid #fff;
+  color: #666;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+.footer>* { font-size: .65em; }
